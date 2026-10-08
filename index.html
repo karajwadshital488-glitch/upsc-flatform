@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Goals Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">UPSC Preparation</p>
+          <h1>Study Goals Dashboard</h1>
+          <p class="subtitle">Track your progress with a clear and motivating view of your daily, weekly, and monthly targets.</p>
+        </div>
+        <button class="add-goal-btn" id="openModal">+ Add New Goal</button>
+      </header>
+
+      <main class="goals-grid" id="goalsGrid">
+        <article class="goal-card">
+          <div class="goal-header">
+            <h2>Daily Goal</h2>
+            <span class="goal-tag">Study 2 Hours</span>
+          </div>
+          <div class="progress-row">
+            <div class="progress-bar"><span style="width: 75%"></span></div>
+            <strong>75%</strong>
+          </div>
+          <p class="goal-note">Consistency matters more than intensity.</p>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-header">
+            <h2>Weekly Goal</h2>
+            <span class="goal-tag">Complete Assignments</span>
+          </div>
+          <div class="progress-row">
+            <div class="progress-bar"><span style="width: 60%"></span></div>
+            <strong>60%</strong>
+          </div>
+          <p class="goal-note">Keep the momentum going through the week.</p>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-header">
+            <h2>Monthly Goal</h2>
+            <span class="goal-tag">Achieve 90% Average</span>
+          </div>
+          <div class="progress-row">
+            <div class="progress-bar"><span style="width: 100%"></span></div>
+            <strong>100%</strong>
+          </div>
+          <p class="goal-note">You have already reached your monthly target.</p>
+        </article>
+
+        <article class="goal-card">
+          <div class="goal-header">
+            <h2>Material Completion</h2>
+            <span class="goal-tag">Complete Study Material</span>
+          </div>
+          <div class="progress-row">
+            <div class="progress-bar"><span style="width: 100%"></span></div>
+            <strong>100%</strong>
+          </div>
+          <p class="goal-note">All assigned material is completed.</p>
+        </article>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="goalModal" aria-hidden="true">
+      <div class="modal-card">
+        <h3>Add a New Goal</h3>
+        <form id="goalForm">
+          <label>
+            Goal Name
+            <input type="text" id="goalName" placeholder="Example: Revision Session" required />
+          </label>
+          <label>
+            Goal Details
+            <input type="text" id="goalDetails" placeholder="Example: Complete 3 mock tests" required />
+          </label>
+          <label>
+            Progress (%)
+            <input type="number" id="goalProgress" min="0" max="100" value="50" required />
+          </label>
+          <div class="modal-actions">
+            <button type="button" class="secondary-btn" id="closeModal">Cancel</button>
+            <button type="submit" class="add-goal-btn">Save Goal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
